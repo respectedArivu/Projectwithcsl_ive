@@ -8,8 +8,8 @@ import Footer from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Contentstack-Nextjs-Starter-App",
-  applicationName: "Contentstack-Nextjs-Starter-App",
+  title: "Arivu@Horizontal",
+  applicationName: "Arivu@Horizontal",
 };
 
 export const viewport: Viewport = {
