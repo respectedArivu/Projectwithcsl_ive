@@ -4,9 +4,9 @@
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "Contentstack-Nextjs-Starter-App",
-    "short_name": "Starter-App",
-    "description": "Starter app for nextjs and contentstack integration",
+    "name": "Arivu at horizontal",
+    "short_name": "Horizontal in contenststack",
+    "description": "This site is build under Arivanandhan",
     "icons": [
         {
             "src": "/icon/icon-192x192.png",
