@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -38,7 +38,7 @@ export default function Header() {
       <div className='note-div'>
         {header?.notification_bar.show_announcement ? (
           typeof header.notification_bar.announcement_text === 'string' && (
-            <div {...header.notification_bar.$?.announcement_text as {}}>
+            <div {...(header.notification_bar.$?.announcement_text as {})}>
               {parse(header.notification_bar.announcement_text)}
             </div>
           )
@@ -56,7 +56,7 @@ export default function Header() {
                   src={header.logo.url}
                   alt={header.title}
                   title={header.title}
-                  {...header.logo.$?.url as {}}
+                  {...(header.logo.$?.url as {})}
                 />
               </a>
             </Link>
@@ -74,15 +74,19 @@ export default function Header() {
           <ul className='nav-ul header-ul'>
             {header ? (
               header.navigation_menu.map((list) => {
+                const pageRef = list.page_reference?.[0];
+                const itemUrl = pageRef?.url || '#';
+
                 const isActive =
-                  pathname?.replace(/\/$/, '') === list.page_reference[0].url.replace(/\/$/, '');
+                  pathname?.replace(/\/$/, '') === itemUrl.replace(/\/$/, '');
+
                 return (
                   <li
                     key={list.label}
                     className='nav-li'
-                    {...list.page_reference[0].$?.url as {}}
+                    {...(pageRef?.$?.url as {})}
                   >
-                    <Link legacyBehavior href={list.page_reference[0].url}>
+                    <Link legacyBehavior href={itemUrl}>
                       <a className={isActive ? 'active' : ''}>{list.label}</a>
                     </Link>
                   </li>
@@ -93,15 +97,6 @@ export default function Header() {
             )}
           </ul>
         </nav>
-
-        {/* Optional Tooltip */}
-        {/* <div className='json-preview'>
-          <Tooltip content='JSON Preview' direction='top' dynamic={false} delay={200} status={0}>
-            <span data-bs-toggle='modal' data-bs-target='#staticBackdrop'>
-              <img src='/json.svg' alt='JSON Preview icon' />
-            </span>
-          </Tooltip>
-        </div> */}
       </div>
     </header>
   );
