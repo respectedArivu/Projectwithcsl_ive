@@ -147,6 +147,28 @@ export const getSuperheroGalleryRes = async () => {
         response[0].forEach((entry) => addEditableTags(entry, "character", true));
     return response;
 };
+// ---------- NEW: Events ----------
+export const getEventListRes = async () => {
+  const response = await Stack.getEntry({
+    contentTypeUid: "event",
+    referenceFieldPath: undefined,
+    jsonRtePath: ["body"],
+  });
+  liveEdit &&
+    response[0].forEach((entry) => addEditableTags(entry, "event", true));
+  return response[0];
+};
+
+export const getEventPostRes = async (entryUrl) => {
+  const response = await Stack.getEntryByUrl({
+    contentTypeUid: "event",
+    entryUrl,
+    referenceFieldPath: undefined,
+    jsonRtePath: ["body"],
+  });
+  liveEdit && addEditableTags(response[0], "event", true);
+  return response[0];
+};
 
 export const metaData = (seo) => {
     const metaArr = [];
