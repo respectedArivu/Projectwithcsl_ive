@@ -82,16 +82,11 @@ nav ul li a {
 }
 
 header {
- width: 100%;                /* span full width */
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: space-between; /* or center, depending on layout */
-  align-items: center;
-  flex: none;                 /* prevent it from flex-growing */
-  background: #fff;           /* align with viewport */
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 9;
 }
-
 
 header .max-width {
   display: flex;
@@ -135,7 +130,7 @@ header nav {
 
 header nav li a:hover,
 header nav li a.active {
-  color: #000000;
+  color: #715cdd;
 }
 
 .header-ul .hamburger-icon {
@@ -143,14 +138,8 @@ header nav li a.active {
 }
 
 footer {
-  width: 100%;                /* span full width */
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: space-between; /* or center, depending on layout */
-  align-items: center;
-  flex: none;                 /* prevent it from flex-growing */
-  background: #fff; 
+  margin-top: 75px;
+  background: #fff;
 }
 
 footer a {
