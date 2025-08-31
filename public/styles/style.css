@@ -130,7 +130,7 @@ header nav {
 
 header nav li a:hover,
 header nav li a.active {
-  color: #715cdd;
+  color: #000000;
 }
 
 .header-ul .hamburger-icon {
@@ -208,35 +208,35 @@ footer a {
 }
 
 .primary-btn {
-  background: #715cdd;
+  background: #000000;
   color: #fff;
   cursor: pointer;
 }
 
 .primary-btn:hover {
-  background: #715cdd;
+  background: #000000;
   color: #fff;
   font-weight: 600;
 }
 
 .secondary-btn {
-  border: 1px solid #715cdd;
-  color: #715cdd;
+  border: 1px solid #000000;
+  color: #000000;
 }
 
 .secondary-btn:hover {
-  color: #715cdd;
+  color: #000000;
   font-weight: bold;
 }
 
 .tertiary-btn {
   background: #ffffff;
-  color: #715cdd;
+  color: #000000;
   font-weight: bold;
 }
 
 .tertiary-btn:hover {
-  color: #5c49be;
+  color: #000000;
 }
 
 .btn-close {
@@ -549,7 +549,7 @@ footer a {
 }
 
 .about-team-section {
-  background: #f7f7f7;
+  background: #ffffff;
   text-align: center;
 }
 
@@ -603,7 +603,7 @@ footer a {
 
 .contact-page-content > p {
   font-size: 16px;
-  color: #737b7d;
+  color: #ffffff;
 }
 
 .input-fields,
@@ -634,7 +634,7 @@ footer a {
 /* blog list */
 
 .blog-page-banner {
-  background: #715cdd;
+  background: #000000;
   text-align: center;
 }
 
