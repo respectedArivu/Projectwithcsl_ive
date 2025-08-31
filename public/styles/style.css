@@ -82,13 +82,14 @@ nav ul li a {
 }
 
 header {
-  background: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 9;
-  width: 100%;        /* take full width of parent */
-  left: 0;            /* align with viewport */
-  right: 0;           /* align with viewport */
+ width: 100%;                /* span full width */
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: space-between; /* or center, depending on layout */
+  align-items: center;
+  flex: none;                 /* prevent it from flex-growing */
+  background: #fff;           /* align with viewport */
 }
 
 
@@ -142,11 +143,14 @@ header nav li a.active {
 }
 
 footer {
-  margin-top: 75px;
-  background: #fff;
-   width: 100%;       
-  left: 0;
-  right: 0;
+  width: 100%;                /* span full width */
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: space-between; /* or center, depending on layout */
+  align-items: center;
+  flex: none;                 /* prevent it from flex-growing */
+  background: #fff; 
 }
 
 footer a {

@@ -13,12 +13,14 @@
 }
 
 .footer {
-  display: flex;
-  flex: 1;
+  width: 100%;                /* span full width */
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
-  justify-content: center;
+  display: flex;
+  justify-content: space-between; /* or center, depending on layout */
   align-items: center;
+  flex: none;                 /* prevent it from flex-growing */
+  background: #fff;           /* ensure visible full background */
 }
 
 .footer a {
