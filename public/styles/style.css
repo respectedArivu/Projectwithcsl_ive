@@ -144,6 +144,9 @@ header nav li a.active {
 footer {
   margin-top: 75px;
   background: #fff;
+   width: 100%;       
+  left: 0;
+  right: 0;
 }
 
 footer a {
