@@ -189,3 +189,26 @@ export const metaData = (seo) => {
     }
     return metaArr;
 };
+
+// ---------- NEW: Feedback ----------
+export const getFeedbackListRes = async () => {
+  const response = await Stack.getEntry({
+    contentTypeUid: "feedback",
+    referenceFieldPath: undefined,
+    jsonRtePath: ["message"],
+  });
+  liveEdit &&
+    response[0].forEach((entry) => addEditableTags(entry, "feedback", true));
+  return response[0];
+};
+
+export const getFeedbackPostRes = async (entryUrl) => {
+  const response = await Stack.getEntryByUrl({
+    contentTypeUid: "feedback",
+    entryUrl,
+    referenceFieldPath: undefined,
+    jsonRtePath: ["message"],
+  });
+  liveEdit && addEditableTags(response[0], "feedback", true);
+  return response[0];
+};
