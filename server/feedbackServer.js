@@ -3,6 +3,8 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
+// app/layout.tsx
+import './globals.css';  // <-- must include Tailwind here
 
 dotenv.config();
 
