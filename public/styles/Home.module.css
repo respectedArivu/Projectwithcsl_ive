@@ -13,22 +13,18 @@
 }
 
 .footer {
-  width: 100%;                /* span full width */
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: space-between; /* or center, depending on layout */
-  align-items: center;
-  flex: none;                 /* prevent it from flex-growing */
-  background: #fff;           /* ensure visible full background */
+   position: sticky;
+  bottom: 0;
+  z-index: 9;         /* ensure visible full background */
 }
 
 .footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  display: inline-block;
+  padding: 4px 8px;    /* keep it slim */
+  text-align: center;
 }
+
+
 
 .title a {
   color: #0070f3;

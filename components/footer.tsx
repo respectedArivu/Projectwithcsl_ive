@@ -64,77 +64,55 @@ export default function Footer() {
   const footerData = getFooter ? getFooter : undefined;
 
   return (
-    <footer>
-      <div className='max-width footer-div'>
-        <div className='col-quarter'>
-          {footerData && footerData.logo ? (
-            <Link legacyBehavior href='/'>
-              <a className='logo-tag'>
-                <img
-                  src={footerData.logo.url}
-                  alt={footerData.title}
-                  title={footerData.title}
-                  {...(footer?.logo?.$?.url as {})}
-                  className='logo footer-logo'
-                />
-              </a>
-            </Link>
-          ) : (
-            <Skeleton width={150} />
-          )}
-        </div>
-        <div className='col-half'>
-          <nav>
-            <ul className='nav-ul'>
-              {footerData ? (
-                footerData.navigation.link.map((menu) => (
-                  <li
-                    className='footer-nav-li'
-                    key={menu.title}
-                    {...menu.$?.title}
-                  >
-                    <Link href={menu.href}>{menu.title}</Link>
-                  </li>
-                ))
-              ) : (
-                <Skeleton width={300} />
-              )}
-            </ul>
-          </nav>
-        </div>
-        <div className='col-quarter social-link'>
-          <div className='social-nav'>
-            {footerData ? (
-              footerData.social?.social_share.map((social) => (
-                <a
-                  href={social.link.href}
-                  title={social.link.title}
-                  key={social.link.title}
-                >
-                  {social.icon && (
-                    <img
-                      src={social.icon.url}
-                      alt={social.link.title}
-                      {...social.icon.$?.url as {}}
-                    />
-                  )}
-                </a>
-              ))
-            ) : (
-              <Skeleton width={200} />
-            )}
-          </div>
-        </div>
-      </div>
-      {footerData && typeof footerData.copyright === 'string' ? (
-        <div className='copyright' {...footer?.$?.copyright as {}}>
-          {parse(footerData.copyright)}
-        </div>
+<footer>
+  {/* First row: logo + nav */}
+  <div className="max-width footer-top">
+    <div className="wrapper-logo">
+      {footerData && footerData.logo ? (
+        <Link legacyBehavior href="/">
+          <a className="logo-tag">
+            <img
+              src={footerData.logo.url}
+              alt={footerData.title}
+              title={footerData.title}
+              {...(footer?.logo?.$?.url as {})}
+              className="logo footer-logo"
+            />
+          </a>
+        </Link>
       ) : (
-        <div className='copyright'>
-          <Skeleton width={500} />
-        </div>
+        <Skeleton width={150} />
       )}
-    </footer>
+    </div>
+
+    <nav>
+      <ul className="header-ul">
+        {footerData ? (
+          footerData.navigation.link.map((menu) => (
+            <li key={menu.title}>
+              <Link href={menu.href}>{menu.title}</Link>
+            </li>
+          ))
+        ) : (
+          <Skeleton width={300} />
+        )}
+      </ul>
+    </nav>
+  </div>
+
+  {/* Second row: copyright */}
+  <div className="copyright">
+    {footerData && typeof footerData.copyright === "string" ? (
+      <span {...(footer?.$?.copyright as {})}>
+        {parse(footerData.copyright)}
+      </span>
+    ) : (
+      <Skeleton width={200} />
+    )}
+  </div>
+</footer>
+
+
+
   );
 }

@@ -42,9 +42,9 @@ body p {
 }
 
 .max-width {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 1700px;
 }
 
 .note-div {
@@ -106,6 +106,8 @@ header .wrapper-logo img {
 header nav {
   flex: 1 1 100%;
   text-align: right;
+  
+  font-size: large;
 }
 
 .header-div {
@@ -130,7 +132,7 @@ header nav {
 
 header nav li a:hover,
 header nav li a.active {
-  color: #715cdd;
+  color: #2f00ff;
 }
 
 .header-ul .hamburger-icon {
@@ -138,38 +140,50 @@ header nav li a.active {
 }
 
 footer {
-  margin-top: 75px;
   background: #fff;
+  width: 100%;
+  margin: 0;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center;
+  padding: 5px px;
+}
+
+footer nav ul {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer li {
+  display: inline-block;
 }
 
 footer a {
-  color: #222222;
-  padding: 12px;
+  color: #222;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: large;
 }
 
-.footer-div {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.footer-nav-li {
-  padding: 0;
-}
-
-.col-half {
-  margin: auto;
-}
-
-.col-quarter {
-  display: inline-block;
-  margin: auto 0;
+footer a:hover {
+  color: #1100ff;
 }
 
 .copyright {
-  padding: 5px;
+  font-size: 12px;
+  color: #000000;
   text-align: center;
+  height: 16px;  
+  padding: 1px 0;
+  top: 0;
 }
+
 
 .contact-form {
   width: 100%;
@@ -215,7 +229,7 @@ footer a {
 
 .primary-btn:hover {
   background: #000000;
-  color: #fff;
+  color: #1900ff;
   font-weight: 600;
 }
 
@@ -250,7 +264,7 @@ footer a {
   font-weight: bold;
   font-size: 13px;
   line-height: 135%;
-  color: #647696;
+  color: #000000;
 }
 
 .modal-btn:hover {
@@ -721,6 +735,7 @@ footer a {
 
   .footer-div {
     flex-direction: column;
+    
   }
 
   .col-half {
@@ -729,11 +744,11 @@ footer a {
   }
 
   .col-quarter {
-    padding: 15px 0;
+    padding: 1px 0;
   }
 
   .footer-nav-li {
-    padding: 7px;
+    padding: 0px;
   }
 
   .nav-ul {
